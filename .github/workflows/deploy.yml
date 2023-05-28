@@ -1,0 +1,41 @@
+name: Deployment Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup job
+        run: echo "Setting up job..."
+
+      - name: Check out code
+        run: echo "Checking out code..."
+
+      - name: Install kubectl
+        run: echo "Installing kubectl..."
+
+      - name: Config AWS credentials
+        run: echo "Configuring AWS credentials..."
+
+      - name: Login to Amazon ECR
+        run: echo "Logging in to Amazon ECR..."
+
+      - name: Load secrets and save to app.env
+        run: echo "Loading secrets and saving to app.env..."
+
+      - name: Build and push to Amazon ECR
+        run: echo "Building and pushing to Amazon ECR..."
+
+      - name: Update kube config
+        run: echo "Updating kube config..."
+
+      - name: Deploy images to EKS
+        run: echo "Deploying images to EKS..."
+
+      - name: Post login to Amazon EKS
+        run: echo "Logging in to Amazon EKS..."
