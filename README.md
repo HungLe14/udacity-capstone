@@ -10,3 +10,5 @@ I went to github action to create a jobs which is used to build images and deplo
 I went to aws to initialize eks and add a node group to it
 finally i run kubectl apply -f k8s
 picture of pipeline you can see i attached
+
+NOTICE: I don't have any credit card so that I'll use Github action for this project.
